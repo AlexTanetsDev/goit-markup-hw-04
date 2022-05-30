@@ -314,6 +314,10 @@ header {
   margin-top: 16px;
 }
 
+.teams-links-list li:not(:last-child) {
+  margin-right: 10px;
+}
+
 .team-link {
   width: 44px;
   height: 44px;
@@ -322,15 +326,24 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  color: #afb1b8;
 }
 
-.teams-links-list li:not(:last-child) {
-  margin-right: 10px;
+.team-link:hover {
+  background-color: var(--main-accent-color);
+  color: var(--main-white-color);
 }
 
 .team-icon {
-  height: 20px;
+  fill: currentColor;
 }
+
+.team-icon:hover {
+  fill: currentColor;
+}
+
+/* footer */
 
 footer {
   background-color: #2f303a;
