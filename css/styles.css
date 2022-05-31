@@ -23,9 +23,23 @@ p {
   margin-bottom: 0;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 header {
   border-bottom: 1px solid #ececec;
 }
+
 /* container */
 
 .container {
@@ -69,7 +83,8 @@ header {
 .features-list,
 .portfolio-list,
 .button-list,
-.teams-links-list {
+.teams-links-list,
+.clients-list {
   list-style: none;
   margin-top: 0;
   margin-bottom: 0;
@@ -339,7 +354,39 @@ header {
   fill: currentColor;
 }
 
-.team-icon:hover {
+/* clients */
+
+.clients-title {
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  max-width: 391px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  color: var(--main-title-color);
+}
+
+.clients-list {
+  display: flex;
+}
+
+.clients-list-item {
+  width: 170px;
+  height: 92px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #afb1b8;
+
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+
+.clients-icon {
   fill: currentColor;
 }
 
