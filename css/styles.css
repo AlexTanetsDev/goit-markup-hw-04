@@ -84,7 +84,8 @@ header {
 .portfolio-list,
 .button-list,
 .teams-links-list,
-.clients-list {
+.clients-list,
+.join-links-list {
   list-style: none;
   margin-top: 0;
   margin-bottom: 0;
@@ -345,7 +346,8 @@ header {
   color: #afb1b8;
 }
 
-.team-link:hover {
+.team-link:hover,
+.team-link:focus {
   background-color: var(--main-accent-color);
   color: var(--main-white-color);
 }
@@ -361,10 +363,8 @@ header {
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
-  max-width: 391px;
 
-  margin-left: auto;
-  margin-right: auto;
+  margin-bottom: 50px;
 
   color: var(--main-title-color);
 }
@@ -373,7 +373,10 @@ header {
   display: flex;
 }
 
-.clients-list-item {
+.clients-list-item:not(:last-child) {
+  margin-right: 30px;
+}
+.clients-link {
   width: 170px;
   height: 92px;
   display: flex;
@@ -384,6 +387,12 @@ header {
 
   border: 1px solid #afb1b8;
   border-radius: 4px;
+}
+
+.clients-link:hover,
+.clients-link:focus {
+  border: 1px solid var(--main-accent-color);
+  color: var(--main-accent-color);
 }
 
 .clients-icon {
@@ -398,6 +407,14 @@ footer {
   padding-bottom: 60px;
 }
 
+.footer {
+  display: flex;
+}
+
+.adress-cotain {
+  margin-right: 70px;
+}
+
 .adress {
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -405,7 +422,49 @@ footer {
   font-style: normal;
 }
 
+.footer-join-title {
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--main-white-color);
+
+  margin-bottom: 20px;
+}
+
+.join-links-list {
+  display: flex;
+}
+
+.join-list-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.join-link {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.join-link:hover,
+.join-link:focus {
+  background-color: var(--main-accent-color);
+  color: var(--main-white-color);
+}
+
+.join-icon {
+  fill: var(--main-white-color);
+}
+
 /* porfolio */
+
 .button-list {
   display: flex;
   justify-content: center;
@@ -457,6 +516,12 @@ footer {
 
 .portfolio-list .item:nth-last-child(-n + 3) {
   margin-bottom: 0;
+}
+
+.portfolio-list .item:hover,
+.portfolio-list .item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .portfolio-list-title {
